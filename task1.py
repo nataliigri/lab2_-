@@ -41,14 +41,14 @@ y_values_nodes_approx = approximation(nodes)
 # Побудова графіка
 plt.plot(x_values, y_values_exact, label='f(x)')
 plt.plot(x_values, y_values_approx, label='S(x)', linestyle='dashed')
-plt.scatter(nodes, y_values_nodes_exact, color='red', label='f(узли)')
-plt.scatter(nodes, y_values_nodes_approx, color='blue', label='S(узли)')
+plt.scatter(nodes, y_values_nodes_exact, color='red', label='f(вузли)')
+plt.scatter(nodes, y_values_nodes_approx, color='blue', label='S(вузли)')
 plt.legend()
 
 
 # Друк числових результатів
 for i in range(len(nodes)):
-    print(f"Узол {nodes[i]}:")
+    print(f"Вузол {nodes[i]}:")
     print(f"f({nodes[i]}) = {y_values_nodes_exact[i]}")
     print(f"S({nodes[i]}) = {y_values_nodes_approx[i]}")
     print(f"Похибка у вузлі: {abs(y_values_nodes_exact[i] - y_values_nodes_approx[i])}\n")
